@@ -1,0 +1,29 @@
+{
+	"name": "Facebook Unsocial Reader",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Convert the social links on Facebook to normal links",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/"
+			],
+			"js": [
+				"contentscript.js"
+			]
+		}
+	],
+	"permissions": [
+		"windows",
+		"tabs",
+		"http://*/"
+	]
+}
